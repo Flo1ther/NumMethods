@@ -6,14 +6,12 @@ import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) {
-        // UTF-8 зберігає українські літери та математичні символи.
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
-        // Український формат чисел: десяткова кома.
         Locale.setDefault(Locale.forLanguageTag("uk-UA"));
         System.out.println("Лабораторна робота №1. Варіант 22");
         System.out.println("Виконавець: Мирослав Шевчук\n");
 
-        // а) Дійсне ділення та квадратний корінь.
+        // а) Обчислюємо точні значення для порівняння похибок.
         double x1 = 6.0 / 11.0, a1 = 0.545;
         double x2 = Math.sqrt(83.0), a2 = 9.11;
         // Абсолютна похибка - модуль різниці.
@@ -29,7 +27,7 @@ public class Main {
                 ? "Точніша рівність: √83 ≈ 9,11\n"
                 : "Точніша рівність: 6/11 ≈ 0,545\n");
 
-        // б) Рядки в BigDecimal зберігають десяткові числа точно.
+        // б) Задане наближене число та межа його абсолютної похибки.
         BigDecimal a = new BigDecimal("3.7832");
         BigDecimal error = new BigDecimal("0.0043");
         // Соті початкового числа правильні: 0,0043 <= 0,005.
@@ -52,7 +50,7 @@ public class Main {
         BigDecimal c = new BigDecimal("2.678");
         BigDecimal unit = new BigDecimal("0.001");
         BigDecimal limitAbs = unit.divide(new BigDecimal("2"));
-        // Ділення для відносних похибок: 16 знаків після коми.
+        // Оцінка відносної похибки через наближене число.
         BigDecimal relApprox = limitAbs.divide(c, 16, RoundingMode.HALF_UP);
         // Строга верхня межа використовує найменше можливе точне x.
         BigDecimal relStrict = limitAbs.divide(

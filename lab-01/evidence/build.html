@@ -1,8 +1,13 @@
-<!doctype html><meta charset="utf-8"><title>Java build</title>
-<style>body{margin:28px;background:#111827;color:#e5e7eb;font:18px Consolas}
-h1{font:26px Segoe UI;color:#93c5fd}pre{white-space:pre-wrap;line-height:1.5}</style>
-<h1>Java / OpenJDK 21 - build</h1><p>Actual compiler and program output</p>
-<pre>javac 21.0.12.1
+<!doctype html><meta charset="utf-8"><title>Java Build</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#1e1f22;color:#bcbec4;font:14px Segoe UI}
+.ide{height:260px;width:100%;border:1px solid #43454a;background:#1e1f22}
+.bar{height:38px;background:#2b2d30;display:flex;align-items:center;gap:22px;padding:0 16px;border-bottom:1px solid #43454a}
+.active{color:#dfe1e5;border-bottom:2px solid #3574f0;height:38px;padding:9px 12px}
+.tools{height:31px;background:#2b2d30;padding:5px 16px;border-bottom:1px solid #43454a;color:#9da0a8}
+.main{display:flex;height:calc(100% - 69px)}.tree{width:205px;flex-shrink:0;padding:17px;background:#25262a;border-right:1px solid #43454a;line-height:1.35;color:#80c783}
+pre{margin:0;padding:16px;font:14px/1.45 Consolas;white-space:pre-wrap;overflow-wrap:anywhere;color:#dfe1e5;overflow:hidden}
+</style><section class="ide"><div class="bar"><span class="active">Build</span><span>NumMethods</span><span>Main.java</span></div>
+<div class="tools">▶ &nbsp; ↻ &nbsp; ■ &nbsp; │ &nbsp; Build output</div><div class="main"><aside class="tree">✓ NumMethods<br><br>✓ Java compilation<br><br>✓ Completed</aside><pre>javac 21.0.12.1
 javac -encoding UTF-8 -Xlint:all -d out lab-01/src/Main.java
 Exit code: 0. Compilation successful; no warnings.
-</pre>
+</pre></div></section>
